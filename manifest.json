@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Plague Inc. Brasil 2026 - SeuImposto",
+  "version": "1.1.0",
+  "description": "Transforma a apuração presidencial de seuimposto.com em uma partida de Plague Inc. (☣️ Infecção Vermelha vs 🧪 Cura Azul)",
+  "content_scripts": [
+    {
+      "matches": ["https://seuimposto.com/*"],
+      "js": ["plague-inc-seuimposto.user.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "plague-inc-seuimposto@azhizarat",
+      "strict_min_version": "128.0"
+    }
+  }
+}
